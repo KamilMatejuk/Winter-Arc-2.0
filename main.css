@@ -1,0 +1,217 @@
+:root {
+    --background-color: #F3F8F2;
+    --primary-color: #FC814A;
+    --secondary-color: #3581B8;
+    --banner-width: 680px;
+    --row-height: 35px;
+    accent-color: var(--primary-color);
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    min-height: 100svh;
+    background: var(--background-color);
+}
+
+/* header */
+
+#header {
+    text-align: center;
+}
+h1 {
+    font-family: "Climate Crisis";
+    color: var(--primary-color);
+}
+h1 span:nth-of-type(1) {
+    line-height: 0.9rem;
+    font-size: 3rem;
+}
+h1 span:nth-of-type(2) {
+    line-height: 0.9rem;
+    font-size: 2.6rem;
+}
+h1 span:nth-of-type(3) {
+    line-height: 2.3rem;
+    font-size: 3rem;
+}
+#header a {
+    color: var(--primary-color);
+}
+
+/* controls */
+
+#controls>div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+label {
+    width: 150px;
+}
+
+input[type="range"] {
+    width: 500px;
+}
+
+
+#controls button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* banner */
+
+#banner {
+    width: var(--banner-width);
+    height: calc(var(--row-height) * 2);
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: wheat;
+    border: 2px solid black;
+    height: calc(var(--row-height) * 0.6);
+    border-radius: calc(var(--row-height) / 2);
+    padding: calc(var(--row-height) * 0.1) calc(var(--row-height) * 0.2);
+}
+.item > img {
+    height: 100%;
+}
+.item > p {
+    font-size: 1.2rem;
+}
+.item > i {
+    font-size: 1.3rem;
+}
+.item > i.fa-xmark { color: red; }
+.item > i.fa-check { color: green; }
+
+.item:nth-of-type(1) { /* sleep */
+    width: 60px;
+    color: white;
+    background: #073b6199;
+    border-color: #18415f;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.item:nth-of-type(2) { /* nap */
+    width: 60px;
+    margin-left: -4px;
+    flex-direction: row-reverse;
+    background: #46abf399;
+    border-color: #46abf3;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.item:nth-of-type(3) { /* side projects */
+    width: 65px;
+    background: #eeb95099;
+    border-color: #eeb950;
+}
+.item:nth-of-type(4) { /* read */
+    width: 60px;
+    background: #eeb95099;
+    border-color: #eeb950;
+}
+.item:nth-of-type(5) { /* phone */
+    width: 90px;
+    gap: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: #eeb95099;
+    border-color: #eeb950;
+}
+.item:nth-of-type(6), /* linkedin comment */
+.item:nth-of-type(7), /* linkedin post */
+.item:nth-of-type(8) /* medium */
+{
+    width: 60px;
+    background: #76d2ee99;
+    border-color: #76d2ee;
+}
+.item:nth-of-type(6) .fa-comment {
+    font-size: 0.9rem;
+    align-self: flex-start;
+    padding-top: 0.25rem;
+    margin-left: -0.3rem;
+}
+.item:nth-of-type(7) .fa-pen-to-square {
+    font-size: 1rem;
+    align-self: flex-start;
+    padding-top: 0.1rem;
+    margin-left: -0.3rem;
+}
+.item:nth-of-type(8) .fa-pen-to-square {
+    font-size: 1rem;
+    align-self: flex-start;
+    padding-top: 0.1rem;
+    margin-left: -0.3rem;
+}
+.item:nth-of-type(9), /* run */
+.item:nth-of-type(10), /* gym */
+.item:nth-of-type(11), /* shoulders */
+.item:nth-of-type(12), /* pushups */
+.item:nth-of-type(13) /* abs */
+{
+    width: 50px;
+    background: #9dd66799;
+    border-color: #9dd667;
+}
+.item:nth-of-type(11) img {
+    height: 120%;
+}
+.item:nth-of-type(12) img {
+    height: 120%;
+}
+.item:nth-of-type(13) img {
+    height: 120%;
+}
+.item:nth-of-type(14) { /* weight */
+    width: 80px;
+    background: #d48df599;
+    border-color: #d48df5;
+}
+.item:nth-of-type(15) { /* kcal */
+    width: 65px;
+    background: #d48df599;
+    border-color: #d48df5;
+}
+.item:nth-of-type(16) { /* protein */
+    width: 70px;
+    padding-left: 3px;
+    padding-right: 1px;
+    background: #d48df599;
+    border-color: #d48df5;
+}
+.item:nth-of-type(17) { /* creatine */
+    width: 45px;
+    background: #d48df599;
+    border-color: #d48df5;
+}
+
+/* download */
+
+#download {
+    padding: 20px 40px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
