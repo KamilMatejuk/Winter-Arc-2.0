@@ -1,4 +1,3 @@
 # Winter Arc 2.0
 
-Helper webpage for the winter arc 2025.
-Check out more [here](https://medium.com/@kamilmatejuk/the-winter-arc-2-0-fc8145b6efb9).
+Helper webpage for the winter arc 2025. See the live page [here](https://kamilmatejuk.github.io/Winter-Arc-2.0).
