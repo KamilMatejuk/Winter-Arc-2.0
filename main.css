@@ -42,6 +42,9 @@ h1 span:nth-of-type(3) {
 #header a {
     color: var(--primary-color);
 }
+#header p {
+    margin: 5px;
+}
 
 /* controls */
 
