@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+    <!-- toasts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- custom -->
     <link rel="stylesheet" href="main.css" />
     <script src="main.js"></script>
@@ -226,7 +229,10 @@
             <i id="creatine_value_true" class="fa-solid fa-check" style="display: none;"></i>
         </div>
     </div>
-    <button id="download" onclick="download()">Download</button>
+    <div id="buttons">
+        <button id="download" onclick="download()">Download</button>
+        <button id="copy" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
 </body>
 
 </html>

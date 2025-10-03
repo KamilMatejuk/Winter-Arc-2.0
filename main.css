@@ -204,9 +204,10 @@ input[type="range"] {
     border-color: #d48df5;
 }
 
-/* download */
+/* buttons */
 
-#download {
+#buttons button {
+    width: 250px;
     padding: 20px 40px;
     background: var(--primary-color);
     color: white;

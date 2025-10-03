@@ -1,6 +1,6 @@
 function updateNumericValue(key, parsedValue) {
     document.getElementById(`${key}_range`).innerText = parsedValue;
-    if (parsedValue == '0.0h' || parsedValue == '0m') parsedValue = '---';
+    if (parsedValue == '0.0h' || parsedValue == '0m' || parsedValue == '00m') parsedValue = '---';
     document.getElementById(`${key}_value`).innerText = parsedValue;
 }
 
@@ -55,5 +55,22 @@ function download() {
         link.download = 'daily_banner.png';
         link.href = canvas.toDataURL();
         link.click();
+    });
+}
+
+function copyToClipboard() {
+    const banner = document.getElementById('banner');
+    html2canvas(banner).then(canvas => {
+        canvas.toBlob(blob => {
+            const item = new ClipboardItem({ 'image/png': blob });
+            navigator.clipboard.write([item]);
+            Toastify({
+                text: "Copied to clipboard!",
+                duration: 1000,
+                gravity: "bottom",
+                position: "center",
+                style: { background: "gray" },
+            }).showToast();
+        });
     });
 }
