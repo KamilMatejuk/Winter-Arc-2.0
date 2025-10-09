@@ -166,7 +166,7 @@ input[type="range"] {
     margin-left: -0.3rem;
 }
 .item:nth-of-type(9), /* run */
-.item:nth-of-type(10), /* gym */
+.item:nth-of-type(10), /* workout */
 .item:nth-of-type(11), /* shoulders */
 .item:nth-of-type(12), /* pushups */
 .item:nth-of-type(13) /* abs */
