@@ -105,6 +105,7 @@
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="weight" oninput="updateWeightValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
+            <input type="checkbox" oninput="visibilityChange('weight', this)" />
         </div>
         <!-- kcal range -->
         <div>
@@ -112,6 +113,7 @@
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="kcal" oninput="updateNumericValue('kcal', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
+            <input type="checkbox" oninput="visibilityChange('kcal', this)" />
         </div>
         <!-- protein range -->
         <div>
@@ -119,6 +121,7 @@
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="protein" oninput="updateProteinValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
+            <input type="checkbox" oninput="visibilityChange('protein', this)" />
         </div>
         <!-- suppliments checkbox -->
         <div>

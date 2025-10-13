@@ -11,15 +11,15 @@ const DEFAULT_RANGES = {
     protein: { min: 75, max: 250, step: 1, value: 150 },
 }
 const DEFAULT_CHECKBOXES = {
-    run: false, 
-    workout: false, 
-    shoulders: false, 
-    pushups: false, 
-    abs: false, 
-    suppliments: false, 
-    linkedin_comment: false, 
-    linkedin_post: false, 
-    medium: false, 
+    run: false,
+    workout: false,
+    shoulders: false,
+    pushups: false,
+    abs: false,
+    suppliments: false,
+    linkedin_comment: false,
+    linkedin_post: false,
+    medium: false,
 }
 
 function setValues(ranges, checkboxes) {
@@ -117,6 +117,12 @@ function rangeChange(button, increase) {
     if (value < min) value = min;
     range.value = value;
     range.oninput();
+}
+
+function visibilityChange(key, checkbox) {
+    const value = checkbox.checked;
+    checkbox.parentElement.classList.toggle('disabled', value);
+    document.getElementById(`${key}_value`).innerText = value ? '---' : document.getElementById(`${key}_range`).innerText;
 }
 
 function download() {

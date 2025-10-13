@@ -53,6 +53,12 @@ h1 span:nth-of-type(3) {
     justify-content: start;
     align-items: center;
 }
+#controls>div.disabled label,
+#controls>div.disabled button,
+#controls>div.disabled input[type="range"] {
+    opacity: 0.5;
+    pointer-events: none;
+}
 
 label {
     width: 150px;
