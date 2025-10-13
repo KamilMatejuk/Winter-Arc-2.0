@@ -91,6 +91,7 @@ input[type="range"] {
 .item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 5px;
     background: wheat;
     border: 2px solid black;
@@ -201,9 +202,7 @@ input[type="range"] {
     border-color: #d48df5;
 }
 .item:nth-of-type(16) { /* protein */
-    width: 70px;
-    padding-left: 3px;
-    padding-right: 1px;
+    width: 62px;
     background: #d48df599;
     border-color: #d48df5;
 }
