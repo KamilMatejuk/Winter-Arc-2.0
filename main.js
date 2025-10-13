@@ -1,7 +1,77 @@
+// setup
+
+const DEFAULT_RANGES = {
+    sleep: { min: 0, max: 10, step: 0.5, value: 5 },
+    nap: { min: 0, max: 10, step: 0.5, value: 5 },
+    side_projects: { min: 0, max: 8, step: 0.5, value: 4 },
+    read: { min: 0, max: 60, step: 5, value: 30 },
+    phone: { min: 0, max: 300, step: 1, value: 150 },
+    weight: { min: 65, max: 75, step: 0.1, value: 70 },
+    kcal: { min: 1500, max: 3500, step: 1, value: 2500 },
+    protein: { min: 75, max: 250, step: 1, value: 150 },
+}
+const DEFAULT_CHECKBOXES = {
+    run: false, 
+    workout: false, 
+    shoulders: false, 
+    pushups: false, 
+    abs: false, 
+    suppliments: false, 
+    linkedin_comment: false, 
+    linkedin_post: false, 
+    medium: false, 
+}
+
+function setValues(ranges, checkboxes) {
+    for (const key in DEFAULT_RANGES) {
+        const range = ranges[key] || DEFAULT_RANGES[key];
+        const input = document.getElementById(key);
+        input.min = range.min;
+        input.max = range.max;
+        input.step = range.step;
+        input.value = range.value;
+        input.oninput()
+    }
+    for (const key in DEFAULT_CHECKBOXES) {
+        const checkbox = checkboxes[key] || DEFAULT_CHECKBOXES[key];
+        const input = document.getElementById(key)
+        input.checked = checkbox;
+        input.oninput()
+    }
+}
+
+function getFromLocalStorage() {
+    const ranges = {};
+    const checkboxes = {};
+    for (const key in DEFAULT_RANGES) {
+        const value = localStorage.getItem(`range_${key}`);
+        if (value !== null) ranges[key] = { ...DEFAULT_RANGES[key], value: parseFloat(value) };
+    }
+    for (const key in DEFAULT_CHECKBOXES) {
+        const value = localStorage.getItem(`checkbox_${key}`);
+        if (value !== null) checkboxes[key] = (value === 'true');
+    }
+    return { ranges, checkboxes };
+}
+
+function saveToLocalStorage() {
+    for (const key in DEFAULT_RANGES) {
+        const input = document.getElementById(key);
+        localStorage.setItem(`range_${key}`, input.value);
+    }
+    for (const key in DEFAULT_CHECKBOXES) {
+        const input = document.getElementById(key);
+        localStorage.setItem(`checkbox_${key}`, input.checked);
+    }
+}
+
+// working
+
 function updateNumericValue(key, parsedValue) {
     document.getElementById(`${key}_range`).innerText = parsedValue;
     if (parsedValue == '0.0h' || parsedValue == '0m' || parsedValue == '00m') parsedValue = '---';
     document.getElementById(`${key}_value`).innerText = parsedValue;
+    saveToLocalStorage();
 }
 
 function updateBooleanValue(key, value) {
@@ -14,6 +84,7 @@ function updateBooleanValue(key, value) {
         check.style.display = 'none';
         cross.style.display = 'inline';
     }
+    saveToLocalStorage();
 }
 
 function updateMinutesValue(key, value) {
@@ -73,4 +144,10 @@ function copyToClipboard() {
             }).showToast();
         });
     });
+}
+
+// onload
+window.onload = () => {
+    const { ranges, checkboxes } = getFromLocalStorage();
+    setValues(ranges, checkboxes);
 }

@@ -31,51 +31,47 @@
             <span>GENERATOR</span>
         </h1>
         <p>You can check the details and progress
-            <a href="https://medium.com/@kamilmatejuk/the-winter-arc-2-0-fc8145b6efb9" target="_blank">in the article on Medium</a>
+            <a href="https://medium.com/@kamilmatejuk/the-winter-arc-2-0-fc8145b6efb9" target="_blank">in the article on
+                Medium</a>
         </p>
-        <p>The code is available <a href="https://github.com/KamilMatejuk/Winter-Arc-2.0" target="_blank">on GitHub</a></p>
+        <p>The code is available <a href="https://github.com/KamilMatejuk/Winter-Arc-2.0" target="_blank">on GitHub</a>
+        </p>
         <p>Created by Kamil Matejuk</p>
     </div>
     <div id="controls">
         <!-- sleep range -->
         <div>
-            <label for="sleep">Sleep: <span id="sleep_range" class="range-value">5.0h</span></label>
+            <label for="sleep">Sleep: <span id="sleep_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="sleep" min="0" max="10" step=".5" value="5"
-                oninput="updateHoursValue('sleep', this.value)" />
+            <input type="range" id="sleep" oninput="updateHoursValue('sleep', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- nap range -->
         <div>
-            <label for="nap">Nap: <span id="nap_range" class="range-value">5.0h</span></label>
+            <label for="nap">Nap: <span id="nap_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="nap" min="0" max="10" step=".5" value="5"
-                oninput="updateHoursValue('nap', this.value)" />
+            <input type="range" id="nap" oninput="updateHoursValue('nap', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- side projects range -->
         <div>
-            <label for="side_projects">Side Projects: <span id="side_projects_range"
-                    class="range-value">4.0h</span></label>
+            <label for="side_projects">Side Projects: <span id="side_projects_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="side_projects" min="0" max="8" step=".5" value="4"
-                oninput="updateHoursValue('side_projects', this.value)" />
+            <input type="range" id="side_projects" oninput="updateHoursValue('side_projects', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- read range -->
         <div>
-            <label for="read">Read: <span id="read_range" class="range-value">30m</span></label>
+            <label for="read">Read: <span id="read_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="read" min="0" max="60" step="5" value="30"
-                oninput="updateMinutesValue('read', this.value)" />
+            <input type="range" id="read" oninput="updateMinutesValue('read', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- phone range -->
         <div>
-            <label for="phone">Phone: <span id="phone_range" class="range-value">2h 30m</span></label>
+            <label for="phone">Phone: <span id="phone_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="phone" min="0" max="300" step="1" value="150"
-                oninput="updateMinutesValue('phone', this.value)" />
+            <input type="range" id="phone" oninput="updateMinutesValue('phone', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- run checkbox -->
@@ -105,26 +101,23 @@
         </div>
         <!-- weight range -->
         <div>
-            <label for="weight">Weight: <span id="weight_range" class="range-value">70.0kg</span></label>
+            <label for="weight">Weight: <span id="weight_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="weight" min="65" max="75" step=".1" value="70"
-                oninput="updateWeightValue(this.value)" />
+            <input type="range" id="weight" oninput="updateWeightValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- kcal range -->
         <div>
-            <label for="kcal">Kcal: <span id="kcal_range" class="range-value">2500</span></label>
+            <label for="kcal">Kcal: <span id="kcal_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="kcal" min="1500" max="3500" step="1" value="2500"
-                oninput="updateNumericValue('kcal', this.value)" />
+            <input type="range" id="kcal" oninput="updateNumericValue('kcal', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- protein range -->
         <div>
-            <label for="protein">Protein: <span id="protein_range" class="range-value">150g</span></label>
+            <label for="protein">Protein: <span id="protein_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <input type="range" id="protein" min="75" max="225" step="1" value="150"
-                oninput="updateProteinValue(this.value)" />
+            <input type="range" id="protein" oninput="updateProteinValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <!-- suppliments checkbox -->
@@ -152,23 +145,23 @@
     <div id="banner">
         <div class="item">
             <img src="icons/sleep.svg" />
-            <p id="sleep_value">5.0h</p>
+            <p id="sleep_value"></p>
         </div>
         <div class="item">
             <img src="icons/nap.svg" />
-            <p id="nap_value">5.0h</p>
+            <p id="nap_value"></p>
         </div>
         <div class="item">
             <i class="fa-solid fa-laptop-code"></i>
-            <p id="side_projects_value">4.0h</p>
+            <p id="side_projects_value"></p>
         </div>
         <div class="item">
             <i class="fa-solid fa-book"></i>
-            <p id="read_value">30m</p>
+            <p id="read_value"></p>
         </div>
         <div class="item">
             <i class="fa-solid fa-mobile-screen-button"></i>
-            <p id="phone_value">2h 30m</p>
+            <p id="phone_value"></p>
         </div>
         <div class="item">
             <i class="fa-brands fa-square-linkedin"></i>
@@ -215,15 +208,15 @@
         </div>
         <div class="item">
             <i class="fa-solid fa-weight-scale"></i>
-            <p id="weight_value">70.0kg</p>
+            <p id="weight_value"></p>
         </div>
         <div class="item">
             <i class="fa-solid fa-utensils"></i>
-            <p id="kcal_value">2500</p>
+            <p id="kcal_value"></p>
         </div>
         <div class="item">
             <img src="icons/protein.png" />
-            <p id="protein_value">150g</p>
+            <p id="protein_value"></p>
         </div>
         <div class="item">
             <img src="icons/suppliments.png" />
