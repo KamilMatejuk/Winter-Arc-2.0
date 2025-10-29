@@ -41,6 +41,7 @@
     <div id="controls">
         <!-- sleep range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('sleep', this)" />
             <label for="sleep">Sleep: <span id="sleep_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="sleep" oninput="updateHoursValue('sleep', this.value)" />
@@ -48,6 +49,7 @@
         </div>
         <!-- nap range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('nap', this)" />
             <label for="nap">Nap: <span id="nap_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="nap" oninput="updateHoursValue('nap', this.value)" />
@@ -55,6 +57,7 @@
         </div>
         <!-- side projects range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('side_projects', this)" />
             <label for="side_projects">Side Projects: <span id="side_projects_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="side_projects" oninput="updateHoursValue('side_projects', this.value)" />
@@ -62,6 +65,7 @@
         </div>
         <!-- read range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('read', this)" />
             <label for="read">Read: <span id="read_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="read" oninput="updateMinutesValue('read', this.value)" />
@@ -69,6 +73,7 @@
         </div>
         <!-- phone range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('phone', this)" />
             <label for="phone">Phone: <span id="phone_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="phone" oninput="updateMinutesValue('phone', this.value)" />
@@ -76,75 +81,81 @@
         </div>
         <!-- run checkbox -->
         <div>
+            <input type="checkbox" id="run_disabled" oninput="updateBooleanValue('run')" />
             <label for="run">Run:</label>
             <input type="checkbox" id="run" oninput="updateBooleanValue('run')" />
         </div>
         <!-- workout checkbox -->
         <div>
+            <input type="checkbox" id="workout_disabled" oninput="updateBooleanValue('workout')" />
             <label for="workout">Workout:</label>
             <input type="checkbox" id="workout" oninput="updateBooleanValue('workout')" />
         </div>
         <!-- shoulders checkbox -->
         <div>
+            <input type="checkbox" id="shoulders_disabled" oninput="updateBooleanValue('shoulders')" />
             <label for="shoulders">Shoulders:</label>
             <input type="checkbox" id="shoulders" oninput="updateBooleanValue('shoulders')" />
         </div>
         <!-- pushups checkbox -->
         <div>
+            <input type="checkbox" id="pushups_disabled" oninput="updateBooleanValue('pushups')" />
             <label for="pushups">Pushups:</label>
             <input type="checkbox" id="pushups" oninput="updateBooleanValue('pushups')" />
         </div>
         <!-- abs checkbox -->
         <div>
+            <input type="checkbox" id="abs_disabled" oninput="updateBooleanValue('abs')" />
             <label for="abs">Abs:</label>
             <input type="checkbox" id="abs" oninput="updateBooleanValue('abs')" />
         </div>
         <!-- weight range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('weight', this)" />
             <label for="weight">Weight: <span id="weight_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="weight" oninput="updateWeightValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
-            <input type="checkbox" oninput="visibilityChange('weight', this)" />
         </div>
         <!-- kcal range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('kcal', this)" />
             <label for="kcal">Kcal: <span id="kcal_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="kcal" oninput="updateNumericValue('kcal', this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
-            <input type="checkbox" oninput="visibilityChange('kcal', this)" />
         </div>
         <!-- protein range -->
         <div>
+            <input type="checkbox" oninput="visibilityChange('protein', this)" />
             <label for="protein">Protein: <span id="protein_range" class="range-value"></span></label>
             <button onclick="rangeChange(this, false)"><i class="fa-solid fa-chevron-left"></i></button>
             <input type="range" id="protein" oninput="updateProteinValue(this.value)" />
             <button onclick="rangeChange(this, true)"><i class="fa-solid fa-chevron-right"></i></button>
-            <input type="checkbox" oninput="visibilityChange('protein', this)" />
         </div>
         <!-- suppliments checkbox -->
         <div>
+            <input type="checkbox" id="suppliments_disabled" oninput="updateBooleanValue('suppliments')" />
             <label for="suppliments">Suppliments:</label>
             <input type="checkbox" id="suppliments" oninput="updateBooleanValue('suppliments')" />
         </div>
         <!-- linkedin comment checkbox -->
         <div>
+            <input type="checkbox" id="linkedin_comment_disabled" oninput="updateBooleanValue('linkedin_comment')" />
             <label for="linkedin_comment">LinkedIn Comment:</label>
             <input type="checkbox" id="linkedin_comment" oninput="updateBooleanValue('linkedin_comment')" />
-            <input type="checkbox" id="linkedin_comment_disabled" oninput="updateBooleanValue('linkedin_comment')" />
         </div>
         <!-- linkedin post checkbox -->
         <div>
+            <input type="checkbox" id="linkedin_post_disabled" oninput="updateBooleanValue('linkedin_post')" />
             <label for="linkedin_post">LinkedIn Post:</label>
             <input type="checkbox" id="linkedin_post" oninput="updateBooleanValue('linkedin_post')" />
-            <input type="checkbox" id="linkedin_post_disabled" oninput="updateBooleanValue('linkedin_post')" />
         </div>
         <!-- medium checkbox -->
         <div>
+            <input type="checkbox" id="medium_disabled" oninput="updateBooleanValue('medium')" />
             <label for="medium">Medium:</label>
             <input type="checkbox" id="medium" oninput="updateBooleanValue('medium')" />
-            <input type="checkbox" id="medium_disabled" oninput="updateBooleanValue('medium')" />
         </div>
     </div>
     <div id="banner">

@@ -56,7 +56,7 @@ h1 span:nth-of-type(3) {
 #controls>div.disabled label,
 #controls>div.disabled button,
 #controls>div.disabled input[type="range"],
-#controls>div.disabled input[type="checkbox"]:first-of-type {
+#controls>div.disabled input[type="checkbox"]:last-of-type {
     opacity: 0.5;
     pointer-events: none;
 }
@@ -211,6 +211,10 @@ input[type="range"] {
     width: 45px;
     background: #d48df599;
     border-color: #d48df5;
+}
+.item.disabled {
+    background: #b3b3b399;
+    border-color: #b3b3b3;
 }
 
 /* buttons */

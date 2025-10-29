@@ -81,6 +81,7 @@ function updateBooleanValue(key) {
     const checkbox = document.getElementById(key);
     if (disabled !== undefined) {
         checkbox.parentElement.classList.toggle('disabled', disabled);
+        check.parentElement.classList.toggle('disabled', disabled);
     }
 
     if (disabled) {
@@ -136,8 +137,10 @@ function rangeChange(button, increase) {
 
 function visibilityChange(key, checkbox) {
     const value = checkbox.checked;
+    const banner = document.getElementById(`${key}_value`)
     checkbox.parentElement.classList.toggle('disabled', value);
-    document.getElementById(`${key}_value`).innerText = value ? '---' : document.getElementById(`${key}_range`).innerText;
+    banner.parentElement.classList.toggle('disabled', value);
+    banner.innerText = value ? '---' : document.getElementById(`${key}_range`).innerText;
 }
 
 function download() {
