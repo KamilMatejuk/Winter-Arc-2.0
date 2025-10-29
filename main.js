@@ -74,13 +74,28 @@ function updateNumericValue(key, parsedValue) {
     saveToLocalStorage();
 }
 
-function updateBooleanValue(key, value) {
+function updateBooleanValue(key) {
     const check = document.getElementById(`${key}_value_true`)
     const cross = document.getElementById(`${key}_value_false`)
-    if (value) {
+    const disabled = document.getElementById(`${key}_disabled`)?.checked;
+    const checkbox = document.getElementById(key);
+    if (disabled !== undefined) {
+        checkbox.parentElement.classList.toggle('disabled', disabled);
+    }
+
+    if (disabled) {
+        check.style.visibility = 'hidden';
+        cross.style.visibility = 'hidden';
+        check.style.display = 'inline';
+        cross.style.display = 'inline';
+    } else if (checkbox.checked) {
+        check.style.visibility = 'visible';
+        cross.style.visibility = 'hidden';
         check.style.display = 'inline';
         cross.style.display = 'none';
     } else {
+        check.style.visibility = 'hidden';
+        cross.style.visibility = 'visible';
         check.style.display = 'none';
         cross.style.display = 'inline';
     }

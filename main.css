@@ -55,7 +55,8 @@ h1 span:nth-of-type(3) {
 }
 #controls>div.disabled label,
 #controls>div.disabled button,
-#controls>div.disabled input[type="range"] {
+#controls>div.disabled input[type="range"],
+#controls>div.disabled input[type="checkbox"]:first-of-type {
     opacity: 0.5;
     pointer-events: none;
 }
